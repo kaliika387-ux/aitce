@@ -84,7 +84,7 @@ nav a:hover::after, nav a.active::after {
 }
 .about-hero{
   height:60vh;
-  background:url("../css/image/WhatsApp\ Image\ 2026-07-09\ at\ 6.34.29\ PM.jpeg") no-repeat center/cover;
+  background:url("./image/WhatsApp Image 2026-07-09 at 6.34.29 PM.jpeg") no-repeat center/cover;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -110,6 +110,35 @@ nav a:hover::after, nav a.active::after {
   font-weight: 700; 
   margin-bottom: 18px; 
 }
+
+/* Hamburger menu button */
+.menu-btn{
+  display: none;
+  background: transparent;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.menu-btn .bar{
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+.menu-btn .bar::before, .menu-btn .bar::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+}
+.menu-btn .bar::before{ top: -8px; }
+.menu-btn .bar::after{ top: 8px; }
 .hero p { 
   font-size: 20px; 
   margin-bottom: 32px; 
@@ -242,7 +271,6 @@ footer {
   text-align: center;
   padding: 28px 20px;
   margin-top: 40px;
-  height: 50vh;
 }
 footer a { 
   color: yellow; 
@@ -253,13 +281,14 @@ footer a {
   justify-content: space-between;
   margin-bottom: 45px;
   margin-top: 20px;
+  gap: 20px;
 }
 .footergrid-3{
   display: flex;
   flex-direction: column;
   gap: 1.0rem;
   align-items: flex-start;
-  margin-left: 169px;
+  margin-left: 0;
 }
 .footergrid-3 h4{
   font-size: 1.5em;
@@ -274,8 +303,7 @@ footer a {
 .quicklinks{
   display: flex;
   flex-direction: column;
-  /* gap: 1.0rem; */
-  margin-right: 169px;
+  margin-right: 0;
 }
 .quicklinks :hover{
   color: rgb(248, 5, 5);
@@ -283,7 +311,41 @@ footer a {
 hr{
   border: 1px solid rgb(119, 118, 118);
   margin-bottom: 5px;
-  width: 990px;
-  margin-left: 150px;
+  width: 100%;
+  margin: 0 0 16px 0;
+}
+
+/* Responsive rules */
+@media (max-width: 900px) {
+  .logo-area img { height: 48px; }
+  .logo-text { font-size: 16px; }
+  nav .container { padding: 10px 16px; flex-wrap: wrap; }
+  nav ul { gap: 12px; flex-wrap: wrap; }
+  .menu-btn { display: flex; }
+  nav ul { display: none; width: 100%; flex-direction: column; gap: 0; }
+  nav.open ul { display: flex; }
+  .hero { padding: 60px 16px; }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 16px; }
+  .overlay h1 { font-size: 2.2rem; }
+  .overlay p { font-size: 1rem; }
+  .grid-2 { grid-template-columns: 1fr; gap: 24px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .gallery-grid img { height: 200px; }
+  .footergrid-3, .quicklinks { align-items: center; text-align: center; margin: 0; }
+  .top-footer { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 600px) {
+  nav ul { display: flex; width: 100%; justify-content: center; gap: 10px; }
+  nav a { padding: 8px 6px; }
+  .logo-text { font-size: 14px; }
+  .logo-area img { height: 42px; }
+  .hero { padding: 40px 12px; }
+  .hero h1 { font-size: 28px; }
+  h2 { font-size: 28px; margin-bottom: 24px; }
+  .gallery-grid { gap: 12px; }
+  .gallery-grid img { height: auto; }
+  footer { padding: 24px 12px; }
 }
 
