@@ -1,0 +1,289 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+nav {
+  background: darkblue;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* position: fixed; */
+}
+nav .container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: fixed; */
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo-area img {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+}
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(231, 231, 238);
+  line-height: 1.3;
+}
+.logo-text span { 
+  color: rgb(241, 245, 241); 
+  font-size: 14px; 
+  font-weight: 500; 
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+}
+nav a {
+  text-decoration: none;
+  color: rgb(232, 231, 233);
+  font-weight: 500;
+  position:relative;
+  transition: color 0.2s;
+  /* position: fixed; */
+}
+nav a:hover, nav a.active {
+   color: rgb(252, 172, 13); 
+  }
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: rgb(242, 242, 252);
+  transition: width 0.3s;
+}
+nav a:hover::after, nav a.active::after {
+   width: 100%; 
+  }
+
+.hero {
+  background-image:linear-gradient(rgba(12, 15, 12, 0.5),  rgba(81, 85, 81, 0.5)),
+  url(./image/WhatsApp\ Image\ 2026-07-09\ at\ 5.48.41\ PM.jpeg);
+  color: rgb(246, 245, 250);
+  padding: 100px 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-hero{
+  height:60vh;
+  background:url("../css/image/WhatsApp\ Image\ 2026-07-09\ at\ 6.34.29\ PM.jpeg") no-repeat center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.overlay{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+  color:white;
+}
+.overlay h1{
+  font-size:3rem;
+}
+.overlay p{
+  font-size:1.2rem;
+}
+.hero h1 { 
+  font-size: 48px; 
+  font-weight: 700; 
+  margin-bottom: 18px; 
+}
+.hero p { 
+  font-size: 20px; 
+  margin-bottom: 32px; 
+  opacity: 0.95; 
+}
+.btn {
+  display: inline-block;
+  background: yellow;
+  color: black;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+section { 
+  padding: 70px 20px; 
+}
+.container { 
+  max-width: 1150px; 
+  margin: 0 auto; 
+}
+h2 {
+  font-size: 36px;
+  color: blue;
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 700;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 32px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.card {
+  background: rgb(161, 161, 245);
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.card:hover { 
+  transform: translateY(-6px); 
+}
+.card h3 {
+  color: rgb(238, 21, 57);
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card p { 
+  color: blue; 
+}
+.icon { 
+  font-size: 42px; 
+  margin-bottom: 16px; 
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover { 
+  transform: scale(1.04); 
+}
+
+.review {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  border-left: 5px solid yellow;
+}
+.stars { 
+  color: yellow; 
+  font-size: 20px; 
+  margin-bottom: 12px; 
+}
+.review p { 
+  color: gray; 
+  margin-bottom: 16px; 
+  font-style: italic; 
+}
+.review h4 { 
+  color: blue; 
+  font-weight: 600; 
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.contact-info p {
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+.contact-info strong { 
+  color: blue;
+ }
+.map {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+footer {
+  background: darkblue;
+  color: white;
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 40px;
+  height: 50vh;
+}
+footer a { 
+  color: yellow; 
+  text-decoration: none; 
+}
+.top-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+.footergrid-3{
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;
+  align-items: flex-start;
+  margin-left: 169px;
+}
+.footergrid-3 h4{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.footergrid-3 p{
+  font-weight: 500;
+}
+.footergrid-3 span{
+  color: yellow;
+}
+.quicklinks{
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.0rem; */
+  margin-right: 169px;
+}
+.quicklinks :hover{
+  color: rgb(248, 5, 5);
+}
+hr{
+  border: 1px solid rgb(119, 118, 118);
+  margin-bottom: 5px;
+  width: 990px;
+  margin-left: 150px;
+}
+
